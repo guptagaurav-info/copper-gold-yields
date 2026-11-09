@@ -1,0 +1,9 @@
+flowchart LR
+  A["Base metals, copper and gold ETFs<br/>Treasury yields, public mirror 2007-2026"]:::src --> B["Weekly log copper/gold ratio<br/>10-year yield in %"]:::code
+  B --> C["Correlation by period<br/>and rolling 2-year"]:::code
+  B --> D["Fair value fitted 2007-2021<br/>applied to 2022-2026"]:::check
+  B --> E["Out-of-sample forecasts<br/>vs no change"]:::check
+  E --> F["Duration rule vs TLT and 50/50<br/>split at 2019"]:::check
+  classDef src fill:#DCE6F2,stroke:#1F3A5F,color:#222
+  classDef code fill:#E6E1F2,stroke:#5B4B8A,color:#222
+  classDef check fill:#F6DDD8,stroke:#B5473A,color:#222

@@ -1,0 +1,11 @@
+source: https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (stock_prices, daily_treasury_yield; ODC-BY)
+sha256:
+  stock_prices: 4c522ec0dee02cb6554b5c3e4929d512327715c8f89670f9b1898b2403912f98
+  daily_treasury_yield: d01fa8d1b818ad3ba61fe459dcbf317af981b926f513054ba0104328fdce31e0
+main: {copper: DBB, start: "2007-01-12"}      # Invesco DB Base Metals (copper, aluminium, zinc futures)
+robust: {copper: CPER, start: "2011-11-18"}   # United States Copper Index Fund (copper futures only)
+fit_end: "2021-12-31"      # pre-registered: the 'fair value' relationship is fitted on 2007-2021 only
+split: "2019-12-31"        # pre-registered: duration rule reported for 2007-2019 and 2020-2026
+horizon_weeks: 4
+periods: {"2007-13": ["2007", "2013"], "2014-21": ["2014", "2021"], "2022-26": ["2022", "2026"]}
+notional_usd: 1000000000
